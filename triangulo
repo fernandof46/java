@@ -1,0 +1,47 @@
+Classe para calculo da área de um triangulo
+public class triangulo {
+    private float area;
+    private float base;
+    private float altura;
+
+    //entrada de métodos
+
+   public void calculaArea(){
+   this.area = ((this.base * this.altura)/2);
+   }
+
+    public float getArea() {
+        return this.area;
+
+   }
+
+    public void setAltura(float altura) {
+        this.altura = altura;
+    }
+
+    public void setBase(float base) {
+        this.base = base;
+    }
+
+programa calcula a área de um triangulo
+
+import java.util.Scanner;  //classe para entrada de dados pelo usuário
+public class AreaTriangulo {  //chama a classe Areatriangulo criuda
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in); // recebe os dados para o calculo
+
+        triangulo triangulo = new triangulo(); //instancia a classe triangulo
+
+        System.out.println("Entre com o valor da base do triângulo");
+        float base = entrada.nextFloat(); //recebe o valor da base
+        triangulo.setBase(base); //seta o valor da base no objeto base
+
+        System.out.println("Entre com o valor da altura do triângulo");
+        float altura = entrada.nextFloat();
+        triangulo.setAltura(altura);
+
+        triangulo.calculaArea(); //cria um objeto calculaArea da classe triangulo
+
+
+        System.out.printf("A área do triangulo é %.2f\n", triangulo.getArea());
+
