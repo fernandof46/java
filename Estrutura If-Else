@@ -1,1 +1,48 @@
+import java.util.Scanner;
+public class Main {
+    //estruitura condicional simples
+    public static void main(String[] args) {
 
+        /*Declaração de um variável qualquer
+        int x = 5;
+        System.out.println("Atendendo a condição");
+        System.out.println("Bom dia");
+        if(x > 0) { //caso o valor de X seja maior que zero imprimirá a segunda frase
+            System.out.println("Boa tarde");
+        }
+        System.out.println("Boa noite");
+
+        System.out.println("Sem atender a condição");
+        System.out.println("Bom dia");
+        if(x < 0) { //caso o valor de X seja maior que zero imprimirá a segunda frase
+            System.out.println("Boa tarde");
+        }
+        System.out.println("Boa noite");
+        */
+//=================================================================================================
+/*condição IF-ELSE
+ A condição irá testar o horário informado pelo usuário e então  responderá bom dia, boa tarde, ou boa noite
+utilizando uma condição se;
+ */
+        int hora;
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Informe um valor inteiro para hora");
+        hora = entrada.nextInt();
+
+        if(hora > 0 && hora <12){
+            System.out.println("Voce informou o horário:" +hora+ "h, bom dia!!");
+
+        }
+        if(hora > 12 && hora <18){
+            System.out.println("Você informou o horário:" +hora+ "h, boa tarde!!");
+        }
+        else{
+            System.out.println("Você informou o horário:" +hora+ "h, boa noite!!");
+        }
+
+
+
+
+
+    }
+}
