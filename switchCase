@@ -1,0 +1,49 @@
+/* Fazer um programa para ler um valor inteiro de 1 a 7 representando um dia da semana
+(sendo 01 domingo, 02 segunda, etc)
+Escrever na tela o dia da semana correspondente
+
+O comando switc "avalia" a expressão recebida pela variável e retorna o valor de referência
+ */
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        //mensagem para o usuário
+        System.out.println("Escolha um número para saber o dia da semana");
+        //comando para receber a entrada de dados
+        Scanner x = new Scanner(System.in);
+        //recebe os dados via numero inteiro
+        int num = x.nextInt();
+        //String com o dia da semana que será exibido
+        String dia;
+
+        switch(x) {
+            case 1:
+                dia = "domingo";
+                break;
+            case 2:
+                dia = "segunda - feira";
+                break;
+            case 3:
+                dia = "terça - feira";
+                break;
+            case 4:
+                dia = "quarta - feira";
+                break;
+            case 5:
+                dia = "quinta - feira";
+                break;
+            case 6:
+                dia = "sexta - feira";
+                break;
+            case 7:
+                dia = "sábado";
+                break;
+            default:
+                dia = "Valor inválido";
+                break;
+           }
+        System.out.println("Dia da semana:" + dia);
+
+        }
+
+    }
