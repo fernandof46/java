@@ -1,0 +1,29 @@
+//Projeto para estudo de expressão ternária, que é uma expressão utilizada para simplificar o código de comparação IF
+//Código simples que exibe um desconto no valor de um produto
+//classe scanner para entrada de dados
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        //criação do objeto scanner
+        Scanner sc = new Scanner(System.in);
+        //entrada de dados
+        System.out.println("Entre com o preço do produto");
+        double preco = sc.nextDouble();
+        //quando se utiliza expressão ternária a comapração já é feita na variável
+        //minimizando assim linhas de código.
+        double desconto = (preco < 20.0) ? preco *0.1 : preco * 0.05;
+
+        /*condição de comparação Utilizando ELSEIF
+        if (preco < 19.99) {
+        desconto = preco * 0.1;
+    }
+        else{
+            desconto = preco * 0.05;
+        }*/
+
+
+        System.out.println("O valor do desconto é:" + desconto);
+
+
+    }
+}
